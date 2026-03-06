@@ -4,23 +4,10 @@ import Link from 'next/link'
 import RippleCanvas from '@/components/RippleCanvas'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { patterns, featuredCrochet as featured } from '@/data/siteData'
 
 const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: false })
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
-
-const patterns = [
-  { icon: '🧕', title: 'Hijab Patterns', desc: 'Beautiful, modest crochet hijab designs for every occasion — from daily wear to special events. Step-by-step video guides included.', tags: ['Beginner', 'Intermediate', 'Advanced'] },
-  { icon: '🤲', title: 'Prayer Accessories', desc: 'Crochet prayer mats, tasbih pouches, and Quran covers crafted with care and intention.', tags: ['Prayer Mat', 'Tasbih Pouch', 'Quran Cover'] },
-  { icon: '👗', title: 'Islamic Clothing', desc: 'Modest crochet and Sentro knitting machine patterns — abayas, cardigans, skirts, and layering pieces for the Muslim wardrobe.', tags: ['Abaya', 'Cardigan', 'Sentro Knitting'] },
-  { icon: '👜', title: 'Bags & Accessories', desc: 'Crocheted handbags, tote bags, and accessories — functional, stylish, and made with intention.', tags: ['Handbags', 'Tote', 'Accessories'] },
-  { icon: '📹', title: 'Video Guides', desc: 'Step-by-step video walkthroughs for every pattern — watch, pause, rewind, and create at your own pace.', tags: ['YouTube', 'Tutorials', 'All Levels'] },
-  { icon: '🛒', title: 'Etsy Shop', desc: 'Browse and purchase finished handmade pieces — crocheted skirts, hats, and more — directly from our Etsy shop.', tags: ['Handmade', 'Shop', 'Custom Orders'] },
-]
-
-const featured = [
-  { title: 'Crocheted Black Skirt', desc: 'A beautifully crafted crocheted skirt — modest, stylish, and perfect for everyday wear.', tags: ['Skirt', 'Women', 'Adult'] },
-  { title: 'Crocheted Winter Hat', desc: 'A cosy crocheted winter hat designed for warmth and simplicity — suitable for men and women.', tags: ['Hat', 'Women', 'Men'] },
-]
 
 export default function CrochetingPage() {
   return (

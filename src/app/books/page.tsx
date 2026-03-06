@@ -4,18 +4,10 @@ import Link from 'next/link'
 import RippleCanvas from '@/components/RippleCanvas'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { books } from '@/data/siteData'
 
 const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: false })
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
-
-const books = [
-  { icon: '📗', title: 'Becoming Muslim As A Revert', desc: 'A compassionate, comprehensive guide for those who have just embraced Islam — covering the essentials with warmth and clarity. Available on Wattpad and in our store.', tags: ['Reverts', 'New Muslims', 'Essential'] },
-  { icon: '🌸', title: 'Faith & Identity', desc: 'Navigating life as a Muslim in the modern world — building a strong identity grounded in your deen.', tags: ['Identity', 'Modern Muslim', 'Confidence'] },
-  { icon: '🤲', title: 'Muslim Prayer Basics', desc: 'A clear, step-by-step guide to salah for Muslims of all ages and backgrounds — from wudu to the meaning behind every movement.', tags: ['Salah', 'All Ages', 'Guide'] },
-  { icon: '🌙', title: 'Ramadan Companion', desc: 'A month-by-month and day-by-day companion to make every Ramadan your most impactful yet.', tags: ['Ramadan', 'Worship', 'Reflection'] },
-  { icon: '💛', title: 'Islamic Mindset', desc: 'Reframe your thinking with Islamic principles — productivity, gratitude, patience, and tawakkul.', tags: ['Mindset', 'Growth', 'Tawakkul'] },
-  { icon: '👩‍👧', title: 'Muslim Family Life', desc: 'Building a home rooted in Islam — for new parents, couples, and those raising Muslim children.', tags: ['Family', 'Parenting', 'Home'] },
-]
 
 const platforms = [
   { icon: '📕', name: 'Wattpad',   href: 'https://www.wattpad.com/user/muslimsuccesspath',             desc: 'Read our stories and guides free on Wattpad',              link: 'Read →' },

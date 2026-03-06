@@ -5,17 +5,10 @@ import RippleCanvas from '@/components/RippleCanvas'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
+import { episodes } from '@/data/siteData'
+
 const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: false })
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
-
-const episodes = [
-  { icon: '🌙', title: 'Faith in Daily Life', desc: 'Practical reflections on weaving taqwa into every corner of your day — from morning routines to work and family.', tags: ['Daily Life', 'Taqwa', 'Practical'] },
-  { icon: '🔄', title: 'The Revert Experience', desc: 'Honest conversations about what it means to embrace Islam — the beauty, the challenges, and the growth.', tags: ['Reverts', 'Personal', 'Community'] },
-  { icon: '💼', title: 'Halal Hustle', desc: 'Building a purposeful career and business as a Muslim — success that aligns with your values.', tags: ['Business', 'Career', 'Halal'] },
-  { icon: '🤲', title: 'Lessons from the Quran', desc: 'Deep dives into Quranic stories and ayat — extracting timeless wisdom for modern Muslim life.', tags: ['Quran', 'Tafsir', 'Wisdom'] },
-  { icon: '🌸', title: 'Muslim Women Today', desc: 'Conversations celebrating Muslim women — faith, identity, motherhood, and making an impact.', tags: ['Women', 'Identity', 'Empowerment'] },
-  { icon: '⭐', title: 'Ramadan Series', desc: 'A special annual series to deepen your Ramadan experience — spiritually, mentally, and physically.', tags: ['Ramadan', 'Seasonal', 'Worship'] },
-]
 
 export default function PodcastsPage() {
   return (

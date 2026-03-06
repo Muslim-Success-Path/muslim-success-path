@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import RippleCanvas from '@/components/RippleCanvas'
+import { books, tools, courses, episodes, featuredCrochet } from '@/data/siteData'
 
 const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: false })
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
@@ -55,6 +56,11 @@ export default function Home() {
     return () => obs.disconnect()
   }, [])
 
+  const stat1 = useCountUp(featuredCrochet.length, statsVis)
+  const stat2 = useCountUp(books.length, statsVis)
+  const stat3 = useCountUp(courses.length, statsVis)
+  const stat4 = useCountUp(episodes.length, statsVis)
+  const stat5 = useCountUp(tools.length, statsVis)
   const stat6 = useCountUp(6, statsVis)
 
   const handleNewsletter = () => {
@@ -154,11 +160,11 @@ export default function Home() {
         style={{ position: 'relative', overflow: 'hidden' }}>
         <RippleCanvas intensity={0.45} />
         {[
-          { label: 'Crocheted Pieces', val: '0+' },
-          { label: 'Books Written',    val: '0+' },
-          { label: 'Courses Created',  val: '0+' },
-          { label: 'Podcast Episodes', val: '0+' },
-          { label: 'Organizing Tools', val: '0+' },
+          { label: 'Crocheted Pieces', val: stat1 },
+          { label: 'Books Written',    val: stat2 },
+          { label: 'Courses Created',  val: stat3 },
+          { label: 'Podcast Episodes', val: stat4 },
+          { label: 'Organizing Tools', val: stat5 },
           { label: 'Years Expertise',  val: stat6 },
         ].map(s => (
           <div className="stat-item" key={s.label} style={{ position: 'relative', zIndex: 2 }}>
@@ -215,17 +221,17 @@ export default function Home() {
           </div>
           <div className="flow reveal">
             {[
-              { icon:'🎬', name:'Record Video',    note:'Capture the creation process' },
-              { icon:'📱', name:'Social Posts',    note:'Short clips for Instagram & TikTok' },
-              { icon:'📝', name:'Written Pattern', note:'Script becomes a digital product' },
-              { icon:'📚', name:'Books & Courses', note:'Compiled into full learning guides' },
-              { icon:'🎙️', name:'Podcast & YouTube', note:'Audio & video series for all' },
+              { icon:'🎬', name:'Record Video',      note:'Capture the creation process',        href:'/videos' },
+              { icon:'📱', name:'Social Posts',      note:'Short clips for Instagram & TikTok',  href:'/videos' },
+              { icon:'📝', name:'Written Pattern',   note:'Script becomes a digital product',    href:'/crocheting' },
+              { icon:'📚', name:'Books & Courses',   note:'Compiled into full learning guides',  href:'/books' },
+              { icon:'🎙️', name:'Podcast & YouTube', note:'Audio & video series for all',        href:'/podcasts' },
             ].map(s => (
-              <div className="flow-step" key={s.name}>
+              <Link href={s.href} className="flow-step" key={s.name} style={{ textDecoration: 'none' }}>
                 <div className="flow-node">{s.icon}</div>
                 <div className="flow-name">{s.name}</div>
                 <div className="flow-note">{s.note}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

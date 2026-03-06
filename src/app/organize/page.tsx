@@ -4,18 +4,10 @@ import Link from 'next/link'
 import RippleCanvas from '@/components/RippleCanvas'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { tools } from '@/data/siteData'
 
 const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: false })
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
-
-const tools = [
-  { icon: '📋', title: 'Life Tracker', desc: 'A comprehensive life tracking system — available in both Notion and Google Sheets — covering goals, habits, routines, and daily reflection.', tags: ['Notion', 'Google Sheets', 'Trackers'] },
-  { icon: '📊', title: 'Personal Tracker', desc: 'Track your personal progress across health, faith, learning, and productivity — in Notion or Google Sheets format.', tags: ['Google Sheets', 'Notion', 'Personal'] },
-  { icon: '🗂️', title: 'Personal Projects', desc: 'Manage your personal projects from idea to completion — available in both Notion and Google Sheets, designed for the intentional Muslim.', tags: ['Projects', 'Notion', 'Google Sheets'] },
-  { icon: '📅', title: 'Prayer & Ramadan Planner', desc: 'Plan your day around your five daily prayers and make every Ramadan your most impactful yet — a full worship and reflection planning system.', tags: ['Salah', 'Ramadan', 'Worship'] },
-  { icon: '💼', title: 'Back Office & Business Tools', desc: 'Halal business planning templates — back office management, project management, website and app builders, and business How Tos.', tags: ['Back Office', 'Management', 'Builders'] },
-  { icon: '🎯', title: 'Goal Tracking', desc: 'Long-term goal systems built on Islamic values — tracking dunya and akhirah goals together through Notion, Sheets, videos, and courses.', tags: ['Goals', 'Akhirah', 'Mindset'] },
-]
 
 export default function OrganizePage() {
   return (
