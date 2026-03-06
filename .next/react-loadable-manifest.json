@@ -1,0 +1,122 @@
+{
+  "app/about/page.tsx -> @/components/Cursor": {
+    "id": "app/about/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/about/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/about/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/apps/page.tsx -> @/components/Cursor": {
+    "id": "app/apps/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/apps/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/apps/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/books/page.tsx -> @/components/Cursor": {
+    "id": "app/books/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/books/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/books/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/courses/page.tsx -> @/components/Cursor": {
+    "id": "app/courses/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/courses/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/courses/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/crocheting/page.tsx -> @/components/Cursor": {
+    "id": "app/crocheting/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/crocheting/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/crocheting/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/islamic-learning/page.tsx -> @/components/Cursor": {
+    "id": "app/islamic-learning/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/islamic-learning/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/islamic-learning/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/organize/page.tsx -> @/components/Cursor": {
+    "id": "app/organize/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/organize/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/organize/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/page.tsx -> @/components/Cursor": {
+    "id": "app/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/podcasts/page.tsx -> @/components/Cursor": {
+    "id": "app/podcasts/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/podcasts/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/podcasts/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  },
+  "app/roadmap/page.tsx -> @/components/Cursor": {
+    "id": "app/roadmap/page.tsx -> @/components/Cursor",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Cursor_tsx.js"
+    ]
+  },
+  "app/roadmap/page.tsx -> @/components/FluidCanvas": {
+    "id": "app/roadmap/page.tsx -> @/components/FluidCanvas",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_FluidCanvas_tsx.js"
+    ]
+  }
+}
