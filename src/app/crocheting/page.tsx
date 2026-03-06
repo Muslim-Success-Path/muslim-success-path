@@ -9,12 +9,17 @@ const FluidCanvas = dynamic(() => import('@/components/FluidCanvas'), { ssr: fal
 const Cursor      = dynamic(() => import('@/components/Cursor'),      { ssr: false })
 
 const patterns = [
-  { icon: '🧕', title: 'Hijab Patterns', desc: 'Beautiful, modest crochet hijab designs for every occasion — from daily wear to special events.', tags: ['Beginner', 'Intermediate', 'Advanced'] },
+  { icon: '🧕', title: 'Hijab Patterns', desc: 'Beautiful, modest crochet hijab designs for every occasion — from daily wear to special events. Step-by-step video guides included.', tags: ['Beginner', 'Intermediate', 'Advanced'] },
   { icon: '🤲', title: 'Prayer Accessories', desc: 'Crochet prayer mats, tasbih pouches, and Quran covers crafted with care and intention.', tags: ['Prayer Mat', 'Tasbih Pouch', 'Quran Cover'] },
-  { icon: '👗', title: 'Islamic Clothing', desc: 'Modest crochet clothing patterns including abayas, cardigans, and layering pieces.', tags: ['Abaya', 'Cardigan', 'Modest Wear'] },
-  { icon: '🎁', title: 'Gifts & Decor', desc: 'Islamic home decor and gift items — wall hangings, bookmarks, and special occasion pieces.', tags: ['Home Decor', 'Gifts', 'Eid'] },
-  { icon: '📹', title: 'Video Guides', desc: 'Step-by-step video walkthroughs for every pattern, designed for all skill levels.', tags: ['YouTube', 'Tutorials', 'All Levels'] },
-  { icon: '🛒', title: 'Etsy Shop', desc: 'Browse and purchase finished handmade pieces directly from our Etsy shop.', tags: ['Handmade', 'Shop', 'Custom Orders'] },
+  { icon: '👗', title: 'Islamic Clothing', desc: 'Modest crochet and Sentro knitting machine patterns — abayas, cardigans, skirts, and layering pieces for the Muslim wardrobe.', tags: ['Abaya', 'Cardigan', 'Sentro Knitting'] },
+  { icon: '👜', title: 'Bags & Accessories', desc: 'Crocheted handbags, tote bags, and accessories — functional, stylish, and made with intention.', tags: ['Handbags', 'Tote', 'Accessories'] },
+  { icon: '📹', title: 'Video Guides', desc: 'Step-by-step video walkthroughs for every pattern — watch, pause, rewind, and create at your own pace.', tags: ['YouTube', 'Tutorials', 'All Levels'] },
+  { icon: '🛒', title: 'Etsy Shop', desc: 'Browse and purchase finished handmade pieces — crocheted skirts, hats, and more — directly from our Etsy shop.', tags: ['Handmade', 'Shop', 'Custom Orders'] },
+]
+
+const featured = [
+  { title: 'Crocheted Black Skirt', desc: 'A beautifully crafted crocheted skirt — modest, stylish, and perfect for everyday wear.', tags: ['Skirt', 'Women', 'Adult'] },
+  { title: 'Crocheted Winter Hat', desc: 'A cosy crocheted winter hat designed for warmth and simplicity — suitable for men and women.', tags: ['Hat', 'Women', 'Men'] },
 ]
 
 export default function CrochetingPage() {
@@ -34,7 +39,7 @@ export default function CrochetingPage() {
             <span className="gold">Purpose</span>
           </h1>
           <p className="hero-sub">
-            Every stitch is an act of intention. Explore Islamic crochet patterns, video guides, and handmade pieces crafted for the modest Muslim lifestyle.
+            Every stitch is an act of intention. Discover crochet and Sentro knitting machine patterns — hijabs, abayas, skirts, handbags, and prayer accessories — with step-by-step video guides and a handmade Etsy shop.
           </p>
           <div className="hero-actions">
             <a href="https://www.etsy.com/shop/EffortlessWorks" target="_blank" rel="noopener noreferrer" className="btn-gold">Shop on Etsy →</a>
@@ -60,6 +65,31 @@ export default function CrochetingPage() {
                 <p className="pillar-desc">{p.desc}</p>
                 <div className="pillar-tags">{p.tags.map(t => <span className="ptag" key={t}>{t}</span>)}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Items */}
+      <section className="section" style={{ position: 'relative', overflow: 'hidden', background: 'var(--bg2)', borderTop: '1px solid var(--border-dim)' }}>
+        <RippleCanvas intensity={0.45} />
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          <div className="reveal">
+            <div className="s-tag">In the Shop</div>
+            <h2 className="s-title">Featured Pieces</h2>
+            <p className="s-sub">Handmade pieces available now in the Etsy shop — each one crafted with care.</p>
+          </div>
+          <div className="res-grid reveal" style={{ marginTop: 40 }}>
+            {featured.map(f => (
+              <a href="https://www.etsy.com/shop/EffortlessWorks" className="res-card" key={f.title} target="_blank" rel="noopener noreferrer">
+                <span className="res-icon">🧶</span>
+                <div className="res-name">{f.title}</div>
+                <div className="res-desc">{f.desc}</div>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 8 }}>
+                  {f.tags.map(t => <span className="ptag" key={t}>{t}</span>)}
+                </div>
+                <div className="res-link" style={{ marginTop: 12 }}>Shop on Etsy →</div>
+              </a>
             ))}
           </div>
         </div>
